@@ -1,0 +1,129 @@
+/* Fonts */
+/* Google fonts import for those who do not block them, they'll load
+   faster from Google (and are probably cached) */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat&display=swap');
+
+@font-face {
+    /* License: fonts/Montserrat-License.txt */
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Montserrat Regular"),
+         local("Montserrat-Regular"),
+         url("/fonts/Montserrat-Regular.woff2") format("woff2"),
+         url("/fonts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    /* License: fonts/OpenSans-License.txt */
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Open Sans Regular"),
+         local("OpenSans-Regular"),
+         url("/fonts/OpenSans-Regular.woff2") format("woff2"),
+         url("/fonts/OpenSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    /* License: fonts/OpenSans-License.txt */
+    font-family: "Open Sans";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Open Sans Italic"),
+         local("OpenSans-Italic"),
+         url("/fonts/OpenSans-Italic.woff2") format("woff2"),
+         url("/fonts/OpenSans-Italic.ttf") format("truetype");
+}
+
+body { font-family: "Open Sans", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+
+
+/* Colors */
+@media (prefers-color-scheme: light) {
+    body { background: #FFF; color: #444; }
+    h1, h2, h3, h4, h5, h6 { color: #222; }
+    a { color: #0037EB; }
+    a:visited { color: #7600D6; }
+    a:hover { color: #4C00EB; }
+    a:active { color: #EB005E; }
+    .comment { color: #666; }
+}
+@media (prefers-color-scheme: dark) {
+    body { background: #333; color: #CCC; }
+    h1, h2, h3, h4, h5, h6 { color: #EEE; }
+    a { color: #BFCFFF; }
+    a:visited { color: #E2BEFF; }
+    a:hover { color: #D3BFFF; }
+    a:active { color: #FFBFD8; }
+    .comment { color: #BBB; }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    padding-top: 0.2em;
+}
+
+
+/* Misc styling */
+/* Normally headers are much too big, a small size bump + the bold font is enough */
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; }
+p  { line-height: 1.5; }
+code { font-size: 0.8rem; }
+footer p { font-size: 0.8rem; }
+
+
+/* Link styling */
+a { text-decoration-style: dashed; }
+a:focus { outline-offset: 2px; }
+
+
+/* Animations for anchors */
+@keyframes highlight-anchor {
+    0% { background-color: #ffa; }
+    100% { background-color: #fff; }
+}
+
+h1:target, h2:target, h3:target, h4:target {
+    animation: 1s highlight-anchor;
+}
+
+/* Blog list styling */
+ul.blog-list { list-style: none; padding-left: 0; }
+ul.blog-list .timestamp {
+    font-size: 0.8rem;
+    margin-top: -0.7rem;
+    margin-bottom: -0.7rem;
+}
+
+
+/* Layout rules (which change depending on device) */
+/* "Desktop view" */
+@media not (max-width: 40rem) {
+    body {
+        width: 40rem;
+        margin: auto;
+    }
+}
+/* "Mobile view" */
+@media (max-width: 40rem) {
+    h1 { font-size: 1.3rem; }
+
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    main, header, footer {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
