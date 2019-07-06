@@ -53,6 +53,10 @@ h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
     a:hover { color: #4C00EB; }
     a:active { color: #EB005E; }
     .comment { color: #666; }
+    @keyframes highlight-anchor {
+        0% { background-color: #ffa; }
+        100% { background-color: #fff; }
+    }
 }
 @media (prefers-color-scheme: dark) {
     body { background: #333; color: #CCC; }
@@ -62,6 +66,10 @@ h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
     a:hover { color: #D3BFFF; }
     a:active { color: #FFBFD8; }
     .comment { color: #BBB; }
+    @keyframes highlight-anchor {
+        0% { background-color: #775; }
+        100% { background-color: #333; }
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,11 +94,6 @@ a:focus { outline-offset: 2px; }
 
 
 /* Animations for anchors */
-@keyframes highlight-anchor {
-    0% { background-color: #ffa; }
-    100% { background-color: #fff; }
-}
-
 h1:target, h2:target, h3:target, h4:target {
     animation: 1s highlight-anchor;
 }
@@ -101,6 +104,16 @@ ul.blog-list .timestamp {
     font-size: 0.8rem;
     margin-top: -0.7rem;
     margin-bottom: -0.7rem;
+}
+
+/* Feed button styling */
+.feed-button {
+    float: right;
+    margin-top: -2.9rem;
+    margin-right: 1rem;
+    padding: 0.2rem;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
 }
 
 
