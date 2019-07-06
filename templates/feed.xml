@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>The Neon Blog</title>
+  <subtitle>Writing about programs and programming.</subtitle>
+  <link href="https://blog.neon.moe/feed.xml" rel="self" />
+  <link href="https://blog.neon.moe/" />
+  <id>tag:blog.neon.moe,2019-07-06:/feed</id>
+  <updated>{{updated}}</updated>
+
+  {{insert-here}}
+</feed>
