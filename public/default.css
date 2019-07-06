@@ -89,8 +89,8 @@ footer p { font-size: 0.8rem; }
 
 
 /* Link styling */
-a { text-decoration-style: dashed; }
-a:focus { outline-offset: 2px; }
+a { text-decoration-skip-ink: auto; }
+a:focus { outline: 1px dashed; outline-offset: 1px; }
 
 
 /* Animations for anchors */

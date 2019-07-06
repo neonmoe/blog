@@ -1,5 +1,4 @@
 public/dark.css
 public/light.css
-public/feed.xml
-public/20*/**/*.html
-public/20*/**/*.xml
+public/**/**/*.html
+public/**/**/*.xml

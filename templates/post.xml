@@ -2,13 +2,13 @@
   <title>{{1}}</title>
   <link href="https://blog.neon.moe{{0}}" />
   <id>{{2}}</id>
-  <published>{{3}}</published>
-  <updated>{{4}}</updated>
+  <published>{{4}}</published>
+  <updated>{{5}}</updated>
   <author>
 	<name>Jens Pitkänen</name>
 	<email>jens@neon.moe</email>
   </author>
-  <summary>{{5}}</summary>
+  <summary>{{6}}</summary>
   <content type="xhtml">
 	<div xmlns="http://www.w3.org/1999/xhtml">
       {{insert-here}}
