@@ -3,8 +3,14 @@
   <title>The Neon Blog</title>
   <subtitle>Writing about programs and programming.</subtitle>
   <link href="https://blog.neon.moe/feed.xml" rel="self" />
-  <link href="https://blog.neon.moe/" />
+  <link href="https://blog.neon.moe/" rel="alternate" />
+  <link href="http://creativecommons.org/licenses/by-nd/4.0/" rel="license" />
   <id>tag:blog.neon.moe,2019-07-06:/feed</id>
+  <icon>https://blog.neon.moe/favicon.ico</icon>
+  <author>
+	<name>Jens Pitkänen</name>
+	<email>jens@neon.moe</email>
+  </author>
   <updated>{{updated}}</updated>
 
   {{insert-here}}

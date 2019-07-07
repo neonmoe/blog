@@ -29,13 +29,13 @@ public/index.html: $(POSTS_PREVIEW)
 	cat $(POSTS_PREVIEW) | awk -f templater.awk - $(TEMPLATE_INDEX) > $@
 
 # Touching the .md files to trigger re-rendering if the template file or the metadata is changed
-$(POSTS:.html=.md): $(TEMPLATE_POST_HTML) $(TEMPLATE_POST_ATOM) $(TEMPLATE_FEED_ATOM) $(POSTS:.html=.csv)
+$(POSTS:.html=.md): $(TEMPLATE_POST_HTML) $(TEMPLATE_POST_PREVIEW) $(TEMPLATE_INDEX) $(TEMPLATE_POST_ATOM) $(TEMPLATE_FEED_ATOM) $(POSTS:.html=.csv)
 	touch $@
 
 .SUFFIXES: .html .preview.html .xml .md
 .md.html:
-	cmark $< | awk -f templater.awk - $(TEMPLATE_POST_HTML) | awk -f templater.awk -v LOAD_LINES=1 $*.csv - > $@
+	cmark --unsafe --smart $< | awk -f templater.awk - $(TEMPLATE_POST_HTML) | awk -f templater.awk -v LOAD_LINES=1 $*.csv - > $@
 .md.preview.html:
 	awk -f templater.awk -v LOAD_LINES=1 $*.csv $(TEMPLATE_POST_PREVIEW) > $@
 .md.xml:
-	cmark $< | awk -f templater.awk - $(TEMPLATE_POST_ATOM) | awk -f templater.awk -v LOAD_LINES=1 $*.csv - > $@
+	cmark --unsafe --smart $< | awk -f templater.awk - $(TEMPLATE_POST_ATOM) | awk -f templater.awk -v LOAD_LINES=1 $*.csv - > $@

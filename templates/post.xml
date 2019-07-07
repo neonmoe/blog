@@ -4,10 +4,6 @@
   <id>{{2}}</id>
   <published>{{4}}</published>
   <updated>{{5}}</updated>
-  <author>
-	<name>Jens Pitkänen</name>
-	<email>jens@neon.moe</email>
-  </author>
   <summary>{{6}}</summary>
   <content type="xhtml">
 	<div xmlns="http://www.w3.org/1999/xhtml">

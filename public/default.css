@@ -1,8 +1,4 @@
 /* Fonts */
-/* Google fonts import for those who do not block them, they'll load
-   faster from Google (and are probably cached) */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat&display=swap');
-
 @font-face {
     /* License: fonts/Montserrat-License.txt */
     font-family: "Montserrat";
@@ -39,9 +35,21 @@
          url("/fonts/OpenSans-Italic.ttf") format("truetype");
 }
 
-body { font-family: "Open Sans", sans-serif; }
+@font-face {
+    /* License: fonts/Inconsolata-License.txt */
+    font-family: "Inconsolata";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("Inconsolata Regular"),
+         local("Inconsolata-Regular"),
+         url("/fonts/Inconsolata-Regular.woff2") format("woff2"),
+         url("/fonts/Inconsolata-Regular.ttf") format("truetype");
+}
 
+body { font-family: "Open Sans", sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+code { font-family: "Inconsolata", monospace; }
 
 
 /* Colors */
@@ -54,8 +62,12 @@ h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
     a:active { color: #EB005E; }
     .comment { color: #666; }
     @keyframes highlight-anchor {
-        0% { background-color: #ffa; }
-        100% { background-color: #fff; }
+        0% { background-color: #FFA; }
+        100% { background-color: #FFF; }
+    }
+    code {
+        background-color: #EEE;
+        border-color: #AAA;
     }
 }
 @media (prefers-color-scheme: dark) {
@@ -70,12 +82,18 @@ h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
         0% { background-color: #775; }
         100% { background-color: #333; }
     }
+    code {
+        background-color: #444;
+        border-color: #777;
+        color: #DDD;
+    }
 }
 
-h1, h2, h3, h4, h5, h6 {
-    padding: 0;
-    padding-top: 0.2em;
-}
+/* A hack to make it so everything doesn't shift when the scrollbar
+   appears/disappears when moving between pages. If there's a problem
+   with this that I'm not aware of, please send me an email, I'm kinda
+   iffy on this myself as well. */
+html { margin-left: calc(100vw - 100%); }
 
 
 /* Misc styling */
@@ -84,11 +102,12 @@ h1 { font-size: 1.5rem; }
 h2 { font-size: 1.2rem; }
 h3 { font-size: 1rem; }
 p  { line-height: 1.5; }
-code { font-size: 0.8rem; }
 footer p { font-size: 0.8rem; }
+ul { padding-left: 1.75em; }
 
 
 /* Link styling */
+a[href*=":"]::after { content: " ↗"; }
 a { text-decoration-skip-ink: auto; }
 a:focus { outline: 1px dashed; outline-offset: 1px; }
 
@@ -116,17 +135,37 @@ ul.blog-list .timestamp {
     padding-right: 0.4rem;
 }
 
+/* Code block styling */
+code {
+    font-size: 0.85rem;
+    margin-bottom: -0.1rem;
+    padding: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    border-radius: 3px;
+    border-width: 0.75px;
+    border-style: solid;
+}
+
+pre code {
+    display: block;
+    padding: 1em;
+    margin-right: 1em;
+    line-height: 1.25;
+    white-space: pre-wrap;
+}
+
 
 /* Layout rules (which change depending on device) */
 /* "Desktop view" */
-@media not (max-width: 40rem) {
+@media not (max-width: 41rem) {
     body {
         width: 40rem;
         margin: auto;
     }
 }
 /* "Mobile view" */
-@media (max-width: 40rem) {
+@media (max-width: 41rem) {
     h1 { font-size: 1.3rem; }
 
     body {
@@ -138,5 +177,18 @@ ul.blog-list .timestamp {
     main, header, footer {
         padding-left: 1em;
         padding-right: 1em;
+    }
+
+    .feed-button {
+        display: block;
+        float: none;
+        margin: 0;
+        margin-top: -0.8em;
+        padding: 0;
+        font-size: 0.9rem;
+    }
+
+    pre code {
+        margin-right: 0;
     }
 }
