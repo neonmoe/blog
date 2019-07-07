@@ -1,17 +1,5 @@
 /* Fonts */
 @font-face {
-    /* License: fonts/Montserrat-License.txt */
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Montserrat Regular"),
-         local("Montserrat-Regular"),
-         url("/fonts/Montserrat-Regular.woff2") format("woff2"),
-         url("/fonts/Montserrat-Regular.ttf") format("truetype");
-}
-
-@font-face {
     /* License: fonts/OpenSans-License.txt */
     font-family: "Open Sans";
     font-style: normal;
@@ -48,27 +36,25 @@
 }
 
 body { font-family: "Open Sans", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "Montserrat", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "Open Sans", sans-serif; }
 code { font-family: "Inconsolata", monospace; }
 
 
 /* Colors */
-@media (prefers-color-scheme: light) {
-    body { background: #FFF; color: #444; }
-    h1, h2, h3, h4, h5, h6 { color: #222; }
-    a { color: #0037EB; }
-    a:visited { color: #7600D6; }
-    a:hover { color: #4C00EB; }
-    a:active { color: #EB005E; }
-    .comment { color: #666; }
-    @keyframes highlight-anchor {
-        0% { background-color: #FFA; }
-        100% { background-color: #FFF; }
-    }
-    code {
-        background-color: #EEE;
-        border-color: #AAA;
-    }
+body { background: #FFF; color: #444; }
+h1, h2, h3, h4, h5, h6 { color: #222; }
+a { color: #0037EB; }
+a:visited { color: #7600D6; }
+a:hover { color: #4C00EB; }
+a:active { color: #EB005E; }
+.comment { color: #666; }
+@keyframes highlight-anchor {
+    0% { background-color: #FFA; }
+    100% { background-color: #FFF; }
+}
+code {
+    background-color: #EEE;
+    border-color: #AAA;
 }
 @media (prefers-color-scheme: dark) {
     body { background: #333; color: #CCC; }
@@ -143,7 +129,7 @@ code {
     padding-left: 2px;
     padding-right: 2px;
     border-radius: 3px;
-    border-width: 0.75px;
+    border-width: 1px;
     border-style: solid;
 }
 
@@ -158,11 +144,9 @@ pre code {
 
 /* Layout rules (which change depending on device) */
 /* "Desktop view" */
-@media not (max-width: 41rem) {
-    body {
-        width: 40rem;
-        margin: auto;
-    }
+body {
+    width: 40rem;
+    margin: auto;
 }
 /* "Mobile view" */
 @media (max-width: 41rem) {
