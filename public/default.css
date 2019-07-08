@@ -1,29 +1,5 @@
 /* Fonts */
 @font-face {
-    /* License: fonts/OpenSans-License.txt */
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Open Sans Regular"),
-         local("OpenSans-Regular"),
-         url("/fonts/OpenSans-Regular.woff2") format("woff2"),
-         url("/fonts/OpenSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    /* License: fonts/OpenSans-License.txt */
-    font-family: "Open Sans";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Open Sans Italic"),
-         local("OpenSans-Italic"),
-         url("/fonts/OpenSans-Italic.woff2") format("woff2"),
-         url("/fonts/OpenSans-Italic.ttf") format("truetype");
-}
-
-@font-face {
     /* License: fonts/Inconsolata-License.txt */
     font-family: "Inconsolata";
     font-style: normal;
@@ -35,8 +11,44 @@
          url("/fonts/Inconsolata-Regular.ttf") format("truetype");
 }
 
-body { font-family: "Open Sans", sans-serif; }
-h1, h2, h3, h4, h5, h6 { font-family: "Open Sans", sans-serif; }
+@font-face {
+    /* License: fonts/B612-License.txt */
+    font-family: "B612";
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local("B612 Italic"),
+         local("B612-Italic"),
+         url("/fonts/B612-Italic.woff2") format("woff2"),
+         url("/fonts/B612-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    /* License: fonts/B612-License.txt */
+    font-family: "B612";
+    font-style: bold;
+    font-weight: 400;
+    font-display: swap;
+    src: local("B612 Bold"),
+         local("B612-Bold"),
+         url("/fonts/B612-Bold.woff2") format("woff2"),
+         url("/fonts/B612-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    /* License: fonts/B612-License.txt */
+    font-family: "B612";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local("B612 Regular"),
+         local("B612-Regular"),
+         url("/fonts/B612-Regular.woff2") format("woff2"),
+         url("/fonts/B612-Regular.ttf") format("truetype");
+}
+
+body { font-family: "B612", sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-family: "B612", sans-serif; }
 code { font-family: "Inconsolata", monospace; }
 
 
