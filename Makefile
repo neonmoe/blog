@@ -25,7 +25,7 @@ public/feed.xml: $(POSTS_XML)
 	cat $@.tmp | awk "/<updated>/ { print }" | sort | tail -n 1 | awk -f templater.awk -v REPLACE="{{updated}}" - $@.tmp.tmp > $@
 	rm $@.tmp $@.tmp.tmp
 
-public/index.html: $(POSTS_PREVIEW)
+public/index.html: $(POSTS_PREVIEW) $(TEMPLATE_INDEX)
 	cat $(POSTS_PREVIEW) | awk -f templater.awk - $(TEMPLATE_INDEX) > $@
 
 # Touching the .md files to trigger re-rendering if the template file or the metadata is changed

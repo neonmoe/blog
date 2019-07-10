@@ -1,58 +1,67 @@
 /* Fonts */
 @font-face {
     /* License: fonts/Inconsolata-License.txt */
-    font-family: "Inconsolata";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("Inconsolata Regular"),
-         local("Inconsolata-Regular"),
+    font-family: "Inconsolata"; font-style: normal; font-weight: normal;
+    src: local("Inconsolata Regular"), local("Inconsolata-Regular"),
          url("/fonts/Inconsolata-Regular.woff2") format("woff2"),
          url("/fonts/Inconsolata-Regular.ttf") format("truetype");
 }
-
 @font-face {
     /* License: fonts/B612-License.txt */
-    font-family: "B612";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: local("B612 Italic"),
-         local("B612-Italic"),
+    font-family: "B612"; font-style: italic; font-weight: normal;
+    src: local("B612 Italic"), local("B612-Italic"),
          url("/fonts/B612-Italic.woff2") format("woff2"),
          url("/fonts/B612-Italic.ttf") format("truetype");
 }
-
 @font-face {
     /* License: fonts/B612-License.txt */
-    font-family: "B612";
-    font-style: bold;
-    font-weight: 400;
-    font-display: swap;
-    src: local("B612 Bold"),
-         local("B612-Bold"),
+    font-family: "B612"; font-style: normal; font-weight: bold;
+    src: local("B612 Bold"), local("B612-Bold"),
          url("/fonts/B612-Bold.woff2") format("woff2"),
          url("/fonts/B612-Bold.ttf") format("truetype");
 }
-
 @font-face {
     /* License: fonts/B612-License.txt */
-    font-family: "B612";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local("B612 Regular"),
-         local("B612-Regular"),
+    font-family: "B612"; font-style: normal; font-weight: normal;
+    src: local("B612 Regular"), local("B612-Regular"),
          url("/fonts/B612-Regular.woff2") format("woff2"),
          url("/fonts/B612-Regular.ttf") format("truetype");
 }
+@font-face {
+    /* License: fonts/Bitter-License.txt */
+    font-family: "Bitter"; font-style: italic; font-weight: normal;
+    src: local("Bitter Italic"), local("Bitter-Italic"),
+         url("/fonts/Bitter-Italic.woff2") format("woff2"),
+         url("/fonts/Bitter-Italic.otf") format("opentype");
+}
+@font-face {
+    /* License: fonts/Bitter-License.txt */
+    font-family: "Bitter"; font-style: normal; font-weight: bold;
+    src: local("Bitter Bold"), local("Bitter-Bold"),
+         url("/fonts/Bitter-Bold.woff2") format("woff2"),
+         url("/fonts/Bitter-Bold.otf") format("opentype");
+}
+@font-face {
+    /* License: fonts/Bitter-License.txt */
+    font-family: "Bitter"; font-style: italic; font-weight: bold;
+    src: local("Bitter Bold Italic"), local("Bitter-BoldItalic"),
+         url("/fonts/Bitter-BoldItalic.woff2") format("woff2"),
+         url("/fonts/Bitter-BoldItalic.otf") format("opentype");
+}
+@font-face {
+    /* License: fonts/Bitter-License.txt */
+    font-family: "Bitter"; font-style: normal; font-weight: normal;
+    src: local("Bitter Regular"), local("Bitter-Regular"),
+         url("/fonts/Bitter-Regular.woff2") format("woff2"),
+         url("/fonts/Bitter-Regular.otf") format("opentype");
+}
 
-body { font-family: "B612", sans-serif; }
+body { font-family: "Bitter", sans-serif; }
 h1, h2, h3, h4, h5, h6 { font-family: "B612", sans-serif; }
 code { font-family: "Inconsolata", monospace; }
 
 
-/* Colors */
+/* Colors (default: light) */
 body { background: #FFF; color: #444; }
 h1, h2, h3, h4, h5, h6 { color: #222; }
 a { color: #0037EB; }
@@ -60,14 +69,11 @@ a:visited { color: #7600D6; }
 a:hover { color: #4C00EB; }
 a:active { color: #EB005E; }
 .comment { color: #666; }
-@keyframes highlight-anchor {
-    0% { background-color: #FFA; }
-    100% { background-color: #FFF; }
-}
 code {
     background-color: #EEE;
     border-color: #AAA;
 }
+
 @media (prefers-color-scheme: dark) {
     body { background: #333; color: #CCC; }
     h1, h2, h3, h4, h5, h6 { color: #EEE; }
@@ -76,10 +82,6 @@ code {
     a:hover { color: #D3BFFF; }
     a:active { color: #FFBFD8; }
     .comment { color: #BBB; }
-    @keyframes highlight-anchor {
-        0% { background-color: #775; }
-        100% { background-color: #333; }
-    }
     code {
         background-color: #444;
         border-color: #777;
@@ -92,16 +94,32 @@ code {
    with this that I'm not aware of, please send me an email, I'm kinda
    iffy on this myself as well. */
 html { margin-left: calc(100vw - 100%); }
+/* The hack isn't needed when the max-width can't be reached. */
+@media (max-width: 42rem) {
+    html { margin-left: 0; }
+}
 
 
-/* Misc styling */
+/* Main layout rules */
+body {
+    max-width: 40rem;
+    margin: auto;
+}
+main, header, footer {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
 /* Normally headers are much too big, a small size bump + the bold font is enough */
-h1 { font-size: 1.5rem; }
+h1 { font-size: 1.3rem; }
 h2 { font-size: 1.2rem; }
 h3 { font-size: 1rem; }
-p  { line-height: 1.5; }
 footer p { font-size: 0.8rem; }
 ul { padding-left: 1.75em; }
+
+/* Make the text easier on the eyes */
+p  { line-height: 1.5; }
 
 
 /* Link styling */
@@ -109,11 +127,6 @@ a[href*=":"]::after { content: " ↗"; }
 a { text-decoration-skip-ink: auto; }
 a:focus { outline: 1px dashed; outline-offset: 1px; }
 
-
-/* Animations for anchors */
-h1:target, h2:target, h3:target, h4:target {
-    animation: 1s highlight-anchor;
-}
 
 /* Blog list styling */
 ul.blog-list { list-style: none; padding-left: 0; }
@@ -125,12 +138,7 @@ ul.blog-list .timestamp {
 
 /* Feed button styling */
 .feed-button {
-    float: right;
-    margin-top: -2.9rem;
-    margin-right: 1rem;
-    padding: 0.2rem;
-    padding-left: 0.4rem;
-    padding-right: 0.4rem;
+    margin-top: -0.8em;
 }
 
 /* Code block styling */
@@ -148,42 +156,18 @@ code {
 pre code {
     display: block;
     padding: 1em;
-    margin-right: 1em;
     line-height: 1.25;
     white-space: pre-wrap;
+
+    /* Since the text is left aligned, it tends to cut off quite a bit
+       before reaching the right margin; code blocks look better if
+       they don't quite reach the right margin (and it's obvious if
+       they do, since they have a background color.) */
+    margin-right: 1em;
 }
-
-
-/* Layout rules (which change depending on device) */
-/* "Desktop view" */
-body {
-    width: 40rem;
-    margin: auto;
-}
-/* "Mobile view" */
-@media (max-width: 41rem) {
-    h1 { font-size: 1.3rem; }
-
-    body {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    main, header, footer {
-        padding-left: 1em;
-        padding-right: 1em;
-    }
-
-    .feed-button {
-        display: block;
-        float: none;
-        margin: 0;
-        margin-top: -0.8em;
-        padding: 0;
-        font-size: 0.9rem;
-    }
-
+@media (max-width: 30rem) {
+    /* But when you're on mobile or otherwise have a narrow client, it's
+       better to just have the code block be as wide as it can. */
     pre code {
         margin-right: 0;
     }
