@@ -1,6 +1,6 @@
 <entry>
   <title>{{1}}</title>
-  <link href="https://blog.neon.moe{{0}}" />
+  <link href="https://blog.neon.moe{{0}}.html" />
   <id>{{2}}</id>
   <published>{{4}}</published>
   <updated>{{5}}</updated>
