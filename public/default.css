@@ -77,10 +77,10 @@ code {
 @media (prefers-color-scheme: dark) {
     body { background: #333; color: #CCC; }
     h1, h2, h3, h4, h5, h6 { color: #EEE; }
-    a { color: #BFCFFF; }
-    a:visited { color: #E2BEFF; }
-    a:hover { color: #D3BFFF; }
-    a:active { color: #FFBFD8; }
+    a { color: #E9EB00; }
+    a:visited { color: #62D600; }
+    a:hover { color: #A4EB00; }
+    a:active { color: #00EB8C; }
     .comment { color: #BBB; }
     code {
         background-color: #444;
