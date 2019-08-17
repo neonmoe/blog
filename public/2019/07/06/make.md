@@ -91,12 +91,12 @@ main(argc, argv)
 
 ### Unimportant meta footnote you can skip
 This is my first techblog, and I hope it was bearable to read. I think
-my english is a bit clumsy in long-form, so if you have got any
+my English is a bit clumsy in long-form, so if you have got any
 writing tips, or just comments on this blog overall, be sure to shoot
-them at [@neon@moe.neon.moe][fedi] (or where I might have moved to) on
-the Fediverse, or via email to [jens@neon.moe][email].
+them at [@neon@fedi.neon.moe][fedi] on the Fediverse, or via email to
+[jens@neon.moe][email].
 
 [xkcd]: https://xkcd.com/927/ "Yeah, it is that one xkcd everyone always posts."
 [posix-make]: http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html
-[fedi]: https://moe.neon.moe/@neon
+[fedi]: https://fedi.neon.moe/neon
 [email]: mailto:jens@neon.moe
