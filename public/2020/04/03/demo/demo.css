@@ -1,0 +1,35 @@
+canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* Pixelated canvases according to: https://stackoverflow.com/questions/7615009/disable-interpolation-when-scaling-a-canvas */
+    image-rendering: optimizeSpeed;             /* Older versions of FF          */
+    image-rendering: -moz-crisp-edges;          /* FF 6.0+                       */
+    image-rendering: -webkit-optimize-contrast; /* Safari                        */
+    image-rendering: -o-crisp-edges;            /* OS X & Windows Opera (12.02+) */
+    image-rendering: pixelated;                 /* Awesome future-browsers       */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE                            */
+}
+
+.credits {
+    position: absolute;
+    left: 1em;
+    bottom: 1em;
+}
+
+.credits p, .credits a, .instructions p, .instructions a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+}
+
+.instructions {
+    position: absolute;
+    left: 1em;
+    top: 1em;
+}

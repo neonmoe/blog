@@ -1,6 +1,6 @@
 .POSIX:
 
-POSTS                 = public/2019/10/27/hidpi.html public/2019/07/15/mastodown.html public/2019/07/06/make.html
+POSTS                 = public/2020/04/03/fps-movement.html public/2019/10/27/hidpi.html public/2019/07/15/mastodown.html public/2019/07/06/make.html
 POSTS_XML             = $(POSTS:.html=.xml)
 POSTS_PREVIEW         = $(POSTS:.html=.preview.html)
 RESOURCES             = public/dark.css public/light.css public/feed.xml public/index.html

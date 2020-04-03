@@ -69,9 +69,10 @@ a:visited { color: #7600D6; }
 a:hover { color: #4C00EB; }
 a:active { color: #EB005E; }
 .comment { color: #666; }
-code {
+code, video {
     background-color: #EEE;
     border-color: #AAA;
+    color: #444;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +83,7 @@ code {
     a:hover { color: #A4EB00; }
     a:active { color: #00EB8C; }
     .comment { color: #BBB; }
-    code {
+    code, video {
         background-color: #444;
         border-color: #777;
         color: #DDD;
@@ -168,7 +169,15 @@ pre code {
 @media (max-width: 30rem) {
     /* But when you're on mobile or otherwise have a narrow client, it's
        better to just have the code block be as wide as it can. */
-    pre code {
-        margin-right: 0;
-    }
+    pre code { margin-right: 0; }
+}
+
+/* Video container styling */
+video {
+    margin: 0;
+    padding: 0;
+    border-width: 2px;
+    border-style: solid;
+    width: 97%;
+    width: calc(100% - 1em);
 }
