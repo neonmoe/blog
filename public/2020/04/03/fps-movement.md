@@ -24,12 +24,14 @@ the gun in the middle: it actually accentuates the lean by staying
 upright.
 
 <video width="400pt" controls loop preload="auto">
-	<source src="{{7}}sample.webm" type="video/webm">
-	<source src="{{7}}sample.mp4" type="video/mp4">
+	<source src="https://blog.neon.moe/2020/04/03/sample.webm" type="video/webm">
+	<source src="sample.webm" type="video/webm">
+	<source src="https://blog.neon.moe/2020/04/03/sample.mp4" type="video/mp4">
+	<source src="sample.mp4" type="video/mp4">
 	<p>
-		You can download the demonstration video here:
-		<a href="{{7}}sample.webm">WebM</a>,
-		<a href="{{7}}sample.mp4">MP4</a>.
+		You can download a demonstration video here:
+		<a href="https://blog.neon.moe/2020/04/03/sample.webm">WebM</a>,
+		<a href="https://blog.neon.moe/2020/04/03/sample.mp4">MP4</a>.
 	</p>
 </video>
 
