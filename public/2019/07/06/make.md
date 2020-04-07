@@ -96,6 +96,8 @@ writing tips, or just comments on this blog overall, be sure to shoot
 them at [@neon@fedi.neon.moe][fedi] on the Fediverse, or via email to
 [jens@neon.moe][email].
 
+<script src="/codehighlighter.min.js" type="text/javascript"></script>
+
 [xkcd]: https://xkcd.com/927/ "Yeah, it is that one xkcd everyone always posts."
 [posix-make]: http://pubs.opengroup.org/onlinepubs/9699919799/utilities/make.html
 [fedi]: https://fedi.neon.moe/neon

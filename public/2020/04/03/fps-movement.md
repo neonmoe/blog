@@ -151,6 +151,8 @@ I hope you learned something, or were entertained. Nevertheless, if
 you have comments, feel free to aim them at my [Fediverse inbox][fedi]
 or [my email][email].
 
+<script src="/codehighlighter.min.js" type="text/javascript"></script>
+
 [quake-src]: https://github.com/id-software/quake "Quake on GitHub"
 [view.c]: https://github.com/id-software/quake/tree/master/WinQuake/view.c "WinQuake/view.c on GitHub"
 [view.c:81]: https://github.com/id-software/quake/tree/master/WinQuake/view.c#L81 "WinQuake/view.c line 81 (V_CalcRoll) on GitHub"

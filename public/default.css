@@ -74,6 +74,12 @@ code, video {
     border-color: #AAA;
     color: #444;
 }
+code .syntax-keyword { color: #85418c; }
+code .syntax-variable { color: #465476; }
+code .syntax-call { color: #2659ae; }
+code .syntax-number { color: #993f33; }
+code .syntax-string { color: #785604; }
+code .syntax-comment { color: #006c00; }
 
 @media (prefers-color-scheme: dark) {
     body { background: #333; color: #CCC; }
@@ -88,6 +94,12 @@ code, video {
         border-color: #777;
         color: #DDD;
     }
+    code .syntax-keyword { color: #e9a6fc; }
+    code .syntax-variable { color: #d5dfe1; }
+    code .syntax-call { color: #5bf2f4; }
+    code .syntax-number { color: #fbd4d3; }
+    code .syntax-string { color: #fbd7b0; }
+    code .syntax-comment { color: #67fb53; }
 }
 
 /* A hack to make it so everything doesn't shift when the scrollbar
