@@ -23,7 +23,7 @@ eyeballing. It should also be noted, that this lean does not apply to
 the gun in the middle: it actually accentuates the lean by staying
 upright.
 
-<video width="400pt" controls loop preload="auto">
+<video width="400pt" controls="1" loop="1" preload="auto">
 	<source src="https://blog.neon.moe/2020/04/03/sample.webm" type="video/webm">
 	<source src="sample.webm" type="video/webm">
 	<source src="https://blog.neon.moe/2020/04/03/sample.mp4" type="video/mp4">
